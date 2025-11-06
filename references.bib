@@ -6,115 +6,6 @@
 % Papers: 1
 
 %===============================================================================
-% NeRF
-%===============================================================================
-@article{knapitsch2017tanks,
-  title={{\tAndT}: Benchmarking Large-Scale Scene Reconstruction},
-  author={Knapitsch, Arno and Park, Jaesik and Zhou, Qian-Yi and Koltun, Vladlen},
-  journal={SIGGRAPH},
-  year={2017},
-}
-
-@article{hedman2018deep,
-  title={Deep blending for free-viewpoint image-based rendering},
-  author={Hedman, Peter and Philip, Julien and Price, True and Frahm, Jan-Michael and Drettakis, George and Brostow, Gabriel},
-  journal={SIGGRAPH},
-  year={2018}
-}
-
-@inproceedings{mildenhall2020nerf,
-  title={{\nerf}: Representing Scenes as Neural Radiance Fields for View Synthesis},
-  author={Mildenhall, Ben and Srinivasan, Pratul and Tancik, Matthew and Barron, Jonathan and Ramamoorthi, Ravi and Ng, Ren},
-  booktitle={ECCV},
-  year={2020}
-}
-
-@inproceedings{barron2021mip,
-  title={{\mipNerf}: A multiscale representation for anti-aliasing neural radiance fields},
-  author={Barron, Jonathan and Mildenhall, Ben and Tancik, Matthew and Hedman, Peter and Martin-Brualla, Ricardo and Srinivasan, Pratul},
-  booktitle={ICCV},
-  year={2021}
-}
-
-@inproceedings{barron2022mipnerf360,
-  title={{\mipNerfTSO}: Unbounded Anti-Aliased Neural Radiance Fields},
-  author={Barron, Jonathan and Mildenhall, Ben and Verbin, Dor and Srinivasan, Pratul and Hedman, Peter},
-  booktitle={CVPR},
-  year={2022}
-}
-
-@inproceedings{fridovich2022plenoxels,
-  title={Plenoxels: Radiance fields without neural networks},
-  author={Keil, Sara and Yu, Alex and Tancik, Matthew and Chen, Qinhong and Recht, Benjamin and Kanazawa, Angjoo},
-  booktitle={CVPR},
-  year={2022}
-}
-
-@article{mueller2022instant,
-  title={Instant Neural Graphics Primitives with a Multiresolution Hash Encoding},
-  author={Thomas M\"uller and Alex Evans and Christoph Schied and Alexander Keller},
-  journal={SIGGRAPH},
-  year={2022},
-}
-
-@inproceedings{barron2023zip,
-  title={{\zipNerf}: Anti-aliased grid-based neural radiance fields},
-  author={Barron, Jonathan and Mildenhall, Ben and Verbin, Dor and Srinivasan, Pratul and Hedman, Peter},
-  booktitle={ICCV},
-  year={2023}
-}
-
-@article{wang2023adaptiveshells,
-  title={Adaptive Shells for Efficient Neural Radiance Field Rendering},
-  author={Wang, Zian and Shen, Tianchang and Nimier-David, Merlin and Sharp, Nicholas and Gao, Jun and Keller, Alexander and Fidler, Sanja and M\"uller, Thomas and Gojcic, Zan},
-  journal={SIGGRAPH},
-  year={2023},
-}
-
-@article{moenne2024gaussray,
-  title={{\threeD} Gaussian Ray Tracing: Fast Tracing of Particle Scenes},
-  author={Loccoz, Nicolas and Mirzaei, Ashkan and Perel, Or and Lutio, Riccardo and Esturo, Janick and State, Gavriel and Fidler, Sanja and Sharp, Nicholas and Gojcic, Zan},
-  journal={SIGGRAPH},
-  year={2024}
-}
-
-@inproceedings{sharma2024volumetric,
-  author={Sharma, Gopal and Rebain, Daniel and Tagliasacchi, Andrea and Yi, Kwang},
-  title={Volumetric Rendering with Baked Quadrature Fields},
-  booktitle={ECCV},
-  year={2024},
-}
-
-@article{mai2024ever,
-  title={{EVER}: Exact volumetric ellipsoid rendering for real-time view synthesis},
-  author={Mai, Alexander and Hedman, Peter and Kopanas, George and Verbin, Dor and Futschik, David and Xu, Qiangeng and Kuester, Falko and Barron, Jonathan and Zhang, Yinda},
-  journal={arXiv preprint arXiv:2410.01804},
-  year={2024}
-}
-
-@inproceedings{wu20253dgut,
-  title={{\threeD GUT}: Enabling distorted cameras and secondary rays in gaussian splatting},
-  author={Wu, Qi and Esturo, Janick Martinez and Mirzaei, Ashkan and Moenne-Loccoz, Nicolas and Gojcic, Zan},
-  booktitle={CVPR},
-  year={2025}
-}
-
-@inproceedings{bulo2025hardware,
-  author={Bul{\`o}, Samuel and Bartolovic, Nemanja and Porzi, Lorenzo and Kontschieder, Peter},
-  title={Hardware-Rasterized Ray-Based Gaussian Splatting},
-  booktitle={CVPR},
-  year={2025}
-}
-
-@article{huang20253dgeer,
-  title={{3DGEER}: Exact and Efficient Volumetric Rendering with {\threeD} Gaussians},
-  author={Huang, Zixun and Wu, Cho-Ying and Guo, Yuliang and Huang, Xinyu and Ren, Liu},
-  journal={arXiv preprint arXiv:2505.24053},
-  year={2025}
-}
-   
-
-%===============================================================================
 % 3DGS
 %===============================================================================
 @article{kerbl2023gaussians,
@@ -148,6 +39,13 @@
 @inproceedings{zhang2024fregs,
   title={{FreGS}: {\threeD} gaussian splatting with progressive frequency regularization},
   author={Zhang, Jiahui and Zhan, Fangneng and Xu, Muyu and Lu, Shijian and Xing, Eric},
+  booktitle={CVPR},
+  year={2024}
+}
+
+@inproceedings{charatan2024pixelsplat,
+  title={{PixelSplat}: {\threeD} gaussian splats from image pairs for scalable generalizable {\threeD} reconstruction},
+  author={Charatan, David and Li, Sizhe Lester and Tagliasacchi, Andrea and Sitzmann, Vincent},
   booktitle={CVPR},
   year={2024}
 }
@@ -222,14 +120,186 @@
   year={2025}
 }
 
+@article{wang2025hyrf,
+  title={{HyRF}: Hybrid Radiance Fields for Efficient and High-quality Novel View Synthesis},
+  author={Wang, Zipeng and Xu, Dan},
+  booktitle={NeurIPS},
+  year={2025}
+}
+
+%===============================================================================
+% NeRF
+%===============================================================================
+@article{knapitsch2017tanks,
+  title={{\tAndT}: Benchmarking Large-Scale Scene Reconstruction},
+  author={Knapitsch, Arno and Park, Jaesik and Zhou, Qian-Yi and Koltun, Vladlen},
+  journal={SIGGRAPH},
+  year={2017},
+}
+
+@article{hedman2018deep,
+  title={Deep blending for free-viewpoint image-based rendering},
+  author={Hedman, Peter and Philip, Julien and Price, True and Frahm, Jan-Michael and Drettakis, George and Brostow, Gabriel},
+  journal={SIGGRAPH},
+  year={2018}
+}
+
+@inproceedings{mildenhall2020nerf,
+  title={{\nerf}: Representing Scenes as Neural Radiance Fields for View Synthesis},
+  author={Mildenhall, Ben and Srinivasan, Pratul and Tancik, Matthew and Barron, Jonathan and Ramamoorthi, Ravi and Ng, Ren},
+  booktitle={ECCV},
+  year={2020}
+}
+
+@inproceedings{barron2021mip,
+  title={{\mipNerf}: A multiscale representation for anti-aliasing neural radiance fields},
+  author={Barron, Jonathan and Mildenhall, Ben and Tancik, Matthew and Hedman, Peter and Martin-Brualla, Ricardo and Srinivasan, Pratul},
+  booktitle={ICCV},
+  year={2021}
+}
+
+@inproceedings{barron2022mipnerf360,
+  title={{\mipNerfTSO}: Unbounded Anti-Aliased Neural Radiance Fields},
+  author={Barron, Jonathan and Mildenhall, Ben and Verbin, Dor and Srinivasan, Pratul and Hedman, Peter},
+  booktitle={CVPR},
+  year={2022}
+}
+
+@inproceedings{fridovich2022plenoxels,
+  title={Plenoxels: Radiance fields without neural networks},
+  author={Keil, Sara and Yu, Alex and Tancik, Matthew and Chen, Qinhong and Recht, Benjamin and Kanazawa, Angjoo},
+  booktitle={CVPR},
+  year={2022}
+}
+
+@inproceedings{rematas2022urban,
+  title={Urban radiance fields},
+  author={Rematas, Konstantinos and Liu, Andrew and Srinivasan, Pratul and Barron, Jonathan and Tagliasacchi, Andrea and Funkhouser, Thomas and Ferrari, Vittorio},
+  booktitle={CVPR},
+  year={2022}
+}
+
+@article{mueller2022instant,
+  title={Instant Neural Graphics Primitives with a Multiresolution Hash Encoding},
+  author={Thomas M\"uller and Alex Evans and Christoph Schied and Alexander Keller},
+  journal={SIGGRAPH},
+  year={2022},
+}
+
+@inproceedings{barron2023zip,
+  title={{\zipNerf}: Anti-aliased grid-based neural radiance fields},
+  author={Barron, Jonathan and Mildenhall, Ben and Verbin, Dor and Srinivasan, Pratul and Hedman, Peter},
+  booktitle={ICCV},
+  year={2023}
+}
+
+@inproceedings{aumentado2023exploring,
+  title={Exploring Reconstructive Latent-Space Neural Radiance Fields},
+  author={Aumentado-Armstrong, Tristan and Mirzaei, Ashkan and Brubaker, Marcus and Kelly, Jonathan and Levinshtein, Alex and Derpanis, Konstantinos and Gilitschenski, Igor},
+  shortauthor = {Tristan A.A.},
+  booktitle={ICCV Workshops},
+  year={2023}
+}
+
+@article{wang2023adaptiveshells,
+  title={Adaptive Shells for Efficient Neural Radiance Field Rendering},
+  author={Wang, Zian and Shen, Tianchang and Nimier-David, Merlin and Sharp, Nicholas and Gao, Jun and Keller, Alexander and Fidler, Sanja and M\"uller, Thomas and Gojcic, Zan},
+  journal={SIGGRAPH},
+  year={2023},
+}
+
+@inproceedings{schnepf2025bringing,
+  title={Bringing {NeRFs} to the Latent Space: Inverse Graphics Autoencoder},
+  author={Schnepf, Antoine and Kassab, Karim and Franceschi, Jean-Yves and Caraffa, Laurent and Vasile, Flavian and Mary, Jeremie and Comport, Andrew I and Gouet-Brunet, Val{\'e}rie},
+  booktitle={ICLR},
+  year={2025}
+}
+
+@article{moenne2024gaussray,
+  title={{\threeD} Gaussian Ray Tracing: Fast Tracing of Particle Scenes},
+  author={Loccoz, Nicolas and Mirzaei, Ashkan and Perel, Or and Lutio, Riccardo and Esturo, Janick and State, Gavriel and Fidler, Sanja and Sharp, Nicholas and Gojcic, Zan},
+  journal={SIGGRAPH},
+  year={2024}
+}
+
+@inproceedings{sharma2024volumetric,
+  author={Sharma, Gopal and Rebain, Daniel and Tagliasacchi, Andrea and Yi, Kwang},
+  title={Volumetric Rendering with Baked Quadrature Fields},
+  booktitle={ECCV},
+  year={2024},
+}
+
+@inproceedings{sun2024pointnerf++,
+  title={{PointNeRF++}: a multi-scale, point-based neural radiance field},
+  author={Sun, Weiwei and Trulls, Eduard and Tseng, Yang-Che and Sambandam, Sneha and Sharma, Gopal and Tagliasacchi, Andrea and Yi, Kwang},
+  booktitle={ECCV},
+  year={2024}
+}
+
+@article{mai2024ever,
+  title={{EVER}: Exact volumetric ellipsoid rendering for real-time view synthesis},
+  author={Mai, Alexander and Hedman, Peter and Kopanas, George and Verbin, Dor and Futschik, David and Xu, Qiangeng and Kuester, Falko and Barron, Jonathan and Zhang, Yinda},
+  journal={arXiv preprint arXiv:2410.01804},
+  year={2024}
+}
+
+@inproceedings{wu20253dgut,
+  title={{\threeD GUT}: Enabling distorted cameras and secondary rays in gaussian splatting},
+  author={Wu, Qi and Esturo, Janick Martinez and Mirzaei, Ashkan and Moenne-Loccoz, Nicolas and Gojcic, Zan},
+  booktitle={CVPR},
+  year={2025}
+}
+
+@inproceedings{bulo2025hardware,
+  author={Bul{\`o}, Samuel and Bartolovic, Nemanja and Porzi, Lorenzo and Kontschieder, Peter},
+  title={Hardware-Rasterized Ray-Based Gaussian Splatting},
+  booktitle={CVPR},
+  year={2025}
+}
+
+@article{huang20253dgeer,
+  title={{3DGEER}: Exact and Efficient Volumetric Rendering with {\threeD} Gaussians},
+  author={Huang, Zixun and Wu, Cho-Ying and Guo, Yuliang and Huang, Xinyu and Ren, Liu},
+  journal={arXiv preprint arXiv:2505.24053},
+  year={2025}
+}
+
 %===============================================================================
 % Image Super Resolution
 %===============================================================================
+@inproceedings{agustsson2017ntire,
+  title={{NTIRE} 2017 challenge on single image super-resolution: Dataset and study},
+  author={Agustsson, Eirikur and Timofte, Radu},
+  booktitle={CVPR workshops},
+  year={2017}
+}
+
+@inproceedings{timofte2017ntire,
+  title={{NTIRE} 2017 challenge on single image super-resolution: Methods and results},
+  author={Timofte, Radu and Agustsson, Eirikur and Van Gool, Luc and Yang, Ming-Hsuan and Zhang, Lei},
+  booktitle={CVPR workshops},
+  year={2017}
+}
+
+@inproceedings{wang2018recovering,
+  title={Recovering realistic texture in image super-resolution by deep spatial feature transform},
+  author={Wang, Xintao and Yu, Ke and Dong, Chao and Loy, Chen Change},
+  booktitle={CVPR},
+  year={2018}
+}
+
 @inproceedings{chen2018fsrnet,
   title={{FSRNet}: End-to-end learning face super-resolution with facial priors},
   author={Chen, Yu and Tai, Ying and Liu, Xiaoming and Shen, Chunhua and Yang, Jian},
   booktitle={CVPR},
   year={2018}
+}
+
+@inproceedings{karras2019style,
+  title={A style-based generator architecture for generative adversarial networks},
+  author={Karras, Tero and Laine, Samuli and Aila, Timo},
+  booktitle={CVPR},
+  year={2019}
 }
 
 @inproceedings{menon2020pulse,
@@ -239,11 +309,25 @@
   year={2020}
 }
 
-@inproceedings{wang2021real,
+@inproceedings{chen2021liif,
+  title={Learning continuous image representation with local implicit image function},
+  author={Chen, Yinbo and Liu, Sifei and Wang, Xiaolong},
+  booktitle={CVPR},
+  year={2021}
+}
+
+@inproceedings{wang2021realesrgan,
   title={{Real-ESRGAN}: Training real-world blind super-resolution with pure synthetic data},
   author={Wang, Xintao and Xie, Liangbin and Dong, Chao and Shan, Ying},
   booktitle={ICCV},
   year={2021}
+}
+
+@inproceedings{lee2022local,
+  title={Local texture estimator for implicit representation function},
+  author={Lee, Jaewon and Jin, Kyong Hwan},
+  booktitle={CVPR},
+  year={2022}
 }
 
 @article{saharia2022image,
@@ -251,6 +335,44 @@
   author={Saharia, Chitwan and Ho, Jonathan and Chan, William and Salimans, Tim and Fleet, David and Norouzi, Mohammad},
   journal={TPAMI},
   year={2022}
+}
+
+@inproceedings{yue2023resshift,
+  title={Resshift: Efficient diffusion model for image super-resolution by residual shifting},
+  author={Yue, Zongsheng and Wang, Jianyi and Loy, Chen},
+  booktitle={NeurIPS},
+  year={2023}
+}
+
+%===============================================================================
+% Neural Fields
+%===============================================================================
+@article{stanley2007compositional,
+  title={Compositional pattern producing networks: A novel abstraction of development},
+  author={Stanley, Kenneth},
+  journal={Genetic programming and evolvable machines},
+  year={2007},
+}
+
+@inproceedings{liu2018intriguing,
+  title={An intriguing failing of convolutional neural networks and the coordconv solution},
+  author={Liu, Rosanne and Lehman, Joel and Molino, Piero and Petroski Such, Felipe and Frank, Eric and Sergeev, Alex and Yosinski, Jason},
+  booktitle={NeurIPS},
+  year={2018}
+}
+
+@inproceedings{park2019deepsdf,
+  title={{DeepSDF}: Learning continuous signed distance functions for shape representation},
+  author={Park, Jeong Joon and Florence, Peter and Straub, Julian and Newcombe, Richard and Lovegrove, Steven},
+  booktitle={CVPR},
+  year={2019}
+}
+
+@inproceedings{sitzmann2021light,
+  title={Light field networks: Neural scene representations with single-evaluation rendering},
+  author={Sitzmann, Vincent and Rezchikov, Semon and Freeman, Bill and Tenenbaum, Josh and Durand, Fredo},
+  booktitle={NeurIPS},
+  year={2021}
 }
 
 %===============================================================================
@@ -312,7 +434,7 @@
   year={2020},
 }
 
-@inproceedings{sitzmann2020implicit,
+@inproceedings{sitzmann2020siren,
   title={Implicit neural representations with periodic activation functions},
   author={Sitzmann, Vincent and Martel, Julien and Bergman, Alexander and Lindell, David and Wetzstein, Gordon},
   booktitle={NeurIPS},
@@ -372,6 +494,23 @@
   title={High-Frequency Enhanced Hybrid Neural Representation for Video Compression},
   author={Yu, Li and Li, Zhihui and Xiao, Jimin and Gabbouj, Moncef},
   journal={Expert Systems with Applications},
+  year={2025}
+}
+
+%===============================================================================
+% Video Diffusion Models
+%===============================================================================
+@inproceedings{gao2024cat3d,
+  title={{CAT3D}: Create Anything in {\threeD} with Multi-View Diffusion Models},
+  author={Gao, Ruiqi and Holynski, Aleksander and Henzler, Philipp and Brussee, Arthur and Martin Brualla, Ricardo and Srinivasan, Pratul and Barron, Jonathan and Poole, Ben},
+  booktitle={NeurIPS},
+  year={2024}
+}
+
+@inproceedings{jin2025lvsm,
+  title={{LVSM}: A Large View Synthesis Model with Minimal {\threeD} Inductive Bias},
+  author={Jin, Haian and Jiang, Hanwen and Tan, Hao and Zhang, Kai and Bi, Sai and Zhang, Tianyuan and Luan, Fujun and Snavely, Noah and Xu, Zexiang},
+  booktitle={ICLR},
   year={2025}
 }
 
@@ -3114,13 +3253,30 @@
 }
 
 %===============================================================================
-% Misc
+% Evaluation Metrics
 %===============================================================================
 @article{wang2004image,
   title={Image quality assessment: from error visibility to structural similarity},
   author={Wang, Zhou and Bovik, Alan and Sheikh, Hamid and Simoncelli, Eero},
   journal={TIP},
   year={2004}
+}
+
+@inproceedings{zhang2018unreasonable,
+  title={The unreasonable effectiveness of deep features as a perceptual metric},
+  author={Zhang, Richard and Isola, Phillip and Efros, Alexei and Shechtman, Eli and Wang, Oliver},
+  booktitle={CVPR},
+  year={2018}
+}
+
+%===============================================================================
+% Misc
+%===============================================================================
+@article{maiorov2002lower,
+  title={Lower bounds for multivariate approximation by affine-invariant dictionaries},
+  author={Maiorov, Vitaly and Meir, Ron},
+  journal={IEEE Transactions on Information Theory},
+  year={2002}
 }
 
 @inproceedings{chen20153d,
@@ -3222,6 +3378,13 @@
   year={2022}
 }
 
+@article{xu2022minimum,
+  title={Minimum excess risk in Bayesian learning},
+  author={Xu, Aolin and Raginsky, Maxim},
+  journal={IEEE Transactions on Information Theory},
+  year={2022},
+}
+
 @misc{fernandez2023tesla,
   title={A Tesla driver was killed after smashing into a firetruck on a California highway},
   author={Fernandez,Roshan},
@@ -3290,6 +3453,12 @@
   year={2018}
 }
 
+@book{bishop2006pattern,
+  title={Pattern recognition and machine learning},
+  author={Bishop, Christopher and Nasrabadi, Nasser},
+  year={2006},
+  publisher={Springer}
+}
 
 %===============================================================================
 % SGD Theory
