@@ -1,3 +1,7 @@
-# 3DOD_paper_template
+# 3DVision_paper_template
 
-Contains notations, paper and references template for writing 3D Object Detection papers.
+Contains notations, paper and references template for writing 3D Vision papers. The template works for the following tasks -
+- Novel View Synthesis
+- 3D Object Detection
+- Monocular Depth Estimation
+- Image Super Resolution
