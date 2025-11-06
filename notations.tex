@@ -117,7 +117,8 @@
 \newcommand{\forExample}{\textit{e.g.}\xspace}
 \newcommand{\thatIs}{\textit{i.e.}\xspace}
 \newcommand{\etcetera}{\textit{etc.}\xspace}
-\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
 % \newcommand{\wrt}{\textit{wrt}\xspace}
 %\newcommand{\etal}{\textit{et~al.}\xspace}
 
@@ -191,13 +192,150 @@
 \newcommand{\leftarrowRHDSmall}{\raisebox{0.05\normalbaselineskip}{\scalebox{0.75}{$\leftarrowRHD$}}} %$\downarrow$
 
 % Conferences
-\newcommand{\cvpr}{CVPR'}
-\newcommand{\eccv}{ECCV'}
-\newcommand{\iccv}{ICCV'}
-\newcommand{\iclr}{ICLR'}
-\newcommand{\icml}{ICML'}
-\newcommand{\nips}{NIPS'}
-\newcommand{\sigg}{SIGG'}
+\newcommand{\cvpr}{CVPR}
+\newcommand{\eccv}{ECCV}
+\newcommand{\iccv}{ICCV}
+\newcommand{\iclr}{ICLR}
+\newcommand{\icml}{ICML}
+\newcommand{\nips}{NIPS}
+\newcommand{\sigg}{SIGG}
+\newcommand{\arxiv}{ArXiv}
+\newcommand{\venue}[1]{\tiny{#1}}
+\newcommand{\citeTiny}[1]{\tiny{\citep{#1}}}
+
+%===============================================================================
+% Novel View Rendering
+%===============================================================================
+\newcommand{\nvs}{NVS\xspace}
+\newcommand{\nerf}{NeRF\xspace}
+\newcommand{\nerfs}{NeRFs\xspace}
+\newcommand{\gs}{3DGS\xspace}
+\newcommand{\gsFull}{\threeD Gaussian Splatting\xspace}
+\newcommand{\sfm}{SfM\xspace}
+\newcommand{\sdf}{SDF\xspace}
+\newcommand{\sh}{SH\xspace}
+
+% Datasets
+\newcommand{\mipNerf}{Mip-\nerf}
+\newcommand{\tAndT}{Tank \& Temples\xspace}
+\newcommand{\deepBlend}{Deep Blending\xspace}
+\newcommand{\ommo}{OMMO\xspace}
+\newcommand{\shelly}{Shelly\xspace}
+\newcommand{\synNerf}{Syn-\nerf}
+\newcommand{\synthNerf}{Synthetic-\nerf}
+
+% Metrics
+\newcommand{\psnr}{PSNR\xspace}
+\newcommand{\ssim}{SSIM\xspace}
+\newcommand{\lpips}{LPIPS\xspace}
+\newcommand{\sep}{\textcolor{black!70}{/}\xspace}
+
+% Ranking
+\newcommand{\firstF}[1]{\hspace{-0.7\fboxsep}\begingroup\setlength{\fboxsep}{0.06cm}\colorbox{sns_violet!60}{${#1}$}\endgroup\hspace{-0.7\fboxsep}}
+\newcommand{\secondF}[1]{\hspace{-0.7\fboxsep}\begingroup\setlength{\fboxsep}{0.06cm}\colorbox{sns_yellow}{${#1}$}\endgroup\hspace{-0.7\fboxsep}}
+\newcommand{\firstFText}[1]{\hspace{-0.7\fboxsep}\begingroup\setlength{\fboxsep}{0.06cm}\colorbox{sns_violet!60}{{#1}}\endgroup\hspace{-0.7\fboxsep}}
+\newcommand{\secondFText}[1]{\hspace{-0.7\fboxsep}\begingroup\setlength{\fboxsep}{0.06cm}\colorbox{sns_yellow}{{#1}}\endgroup\hspace{-0.7\fboxsep}}
+\newcommand{\taken}{$^\dagger$}
+
+% Previous NeRF Papers
+\newcommand{\mipNerfTSO}{Mip-\nerf 360\xspace}
+\newcommand{\zipNerf}{Zip-\nerf}
+\newcommand{\autoRF}{AutoRF\xspace}
+\newcommand{\autoRFWithFCOS}{\autoRF{}\!+\!FCOS\xspace}
+\newcommand{\bootInv}{BootInv\xspace}
+\newcommand{\codeNerf}{CodeNeRF\xspace}
+\newcommand{\upNeRF}{UPNeRF\xspace}
+\newcommand{\upBoot}{UPBootInv\xspace}
+\newcommand{\pixelNerf}{PixelNeRF\xspace}
+
+% Previous 3DGS Papers
+\newcommand{\mcmc}{MCMC\xspace}
+
+%===============================================================================
+% Super Resolution
+%===============================================================================
+\newcommand{\sr}{SR\xspace}
+\newcommand{\lr}{LR\xspace}
+\newcommand{\hr}{HR\xspace}
+
+% Datasets
+\newcommand{\ffhq}{FFHQ\xspace}
+\newcommand{\ffhqFull}{Flickr-Faces-HQ\xspace}
+\newcommand{\celebAHQ}{CelebA-HQ\xspace}
+\newcommand{\divTwoK}{DIV2K\xspace}
+\newcommand{\flikr}{Flikr2K\xspace}
+\newcommand{\ost}{OST\xspace}
+
+% Previous SR papers
+\newcommand{\gan}{GAN\xspace}
+\newcommand{\ddpm}{DDPM\xspace}
+\newcommand{\realEsrgan}{Real-ESRGAN\xspace}
+\newcommand{\srThree}{SR3\xspace}
+
+%===============================================================================
+% Neural Fields
+%===============================================================================
+\newcommand{\querySet}{\mathcal{Q}}
+\newcommand{\query}{\textbf{q}}
+\newcommand{\queryIndex}{\textbf{q}_i}
+\newcommand{\outputSet}{\mathcal{O}}
+\newcommand{\params}{\theta}
+\newcommand{\nField}{f}
+\newcommand{\nFieldGT}{f}
+\newcommand{\nFieldGTLP}{f^{low}}
+\newcommand{\nFieldPdLP}{\hat{f}^{low}}
+\newcommand{\nFieldMLP}{\nField_\params^{MLP}}
+\newcommand{\nFieldCNN}{\nField_\params^{CNN}}
+\newcommand{\nFieldQNN}{\nField_\params^{QNN}}
+\newcommand{\inDim}{d}
+\newcommand{\outDim}{m}
+\newcommand{\numLayer}{l}
+\newcommand{\compose}{\circ}
+\newcommand{\linear}{G}
+\newcommand{\convol}{K}
+\newcommand{\encoding}{\gamma}
+\newcommand{\act}{\sigma}
+\newcommand{\erf}{Erf\xspace}
+\newcommand{\sinc}{Sinc\xspace}
+\newcommand{\siren}{SIREN\xspace}
+\newcommand{\qiren}{QIREN\xspace}
+\newcommand{\inChannels}{C_{in}}
+\newcommand{\outChannels}{C_{out}}
+\newcommand{\hidChannels}{C_{h}}
+\newcommand{\numData}{N}
+\newcommand{\neighbor}{\mathcal{N}(i)}
+\newcommand{\concat}{\oplus}
+\newcommand{\loc}{loc\xspace}
+\newcommand{\dir}{dir\xspace}
+\newcommand{\cen}{cen\xspace}
+\newcommand{\raymap}{raymap\xspace}
+\newcommand{\Raymap}{Raymap\xspace}
+
+\newcommand{\numPrim}{n}
+\newcommand{\error}{\epsilon_q}
+\newcommand{\errorTwo}{\epsilon}
+\newcommand{\errorThree}{\epsilon_3}
+\newcommand{\wavelet}{\psi}
+\newcommand{\sobolev}{r}
+\newcommand{\lambert}{W}
+\newcommand{\measFunc}{Y}
+\newcommand{\mse}{MSE\xspace}
+\newcommand{\neighborhood}{neighborhood\xspace}
+
+\newcommand{\receptive}{\Delta}
+\newcommand{\queryInput}{\mathcal{X}}
+\newcommand{\riskOptimal}{\mathcal{R}^*}
+\newcommand{\parametrize}{\phi}
+\newcommand{\x}{{\mathbf x}}
+\newcommand{\bu}{{\mathbf u}}
+\newcommand{\bb}{{\mathbf b}}
+\newcommand{\bw}{{\mathbf w}}
+\newcommand{\cx}{{\cal X}}
+\newcommand{\cy}{{\cal Y}}
+\newcommand{\cd}{{\cal D}}
+\newcommand{\abs}[1]{\left \lvert #1 \right \rvert}
+\newcommand{\inner}[1]{\left\langle #1 \right\rangle}
+\newcommand{\newTerm}[1]{\textcolor{blue}{\mathbf{#1}}}
 
 %===============================================================================
 % High Frequency
@@ -206,6 +344,7 @@
 \newcommand{\LowFreq}{Low-frequency\xspace}
 \newcommand{\highFreq}{high-frequency\xspace}
 \newcommand{\HighFreq}{High-frequency\xspace}
+\newcommand{\lf}{LF\xspace}
 
 \newcommand{\qConv}{Qonvolution\xspace}
 \newcommand{\qConvs}{Qonvolutions\xspace}
@@ -221,8 +360,6 @@
 \newcommand{\qnn}{QNN\xspace}
 \newcommand{\qnns}{QNNs\xspace}
 
-\newcommand{\siren}{SIREN\xspace}
-\newcommand{\qiren}{QIREN\xspace}
 \newcommand{\hashGrid}{hash-grid\xspace}
 \newcommand{\hashGrids}{hash-grids\xspace}
 \newcommand{\HashGrid}{Hash-grid\xspace}
@@ -230,61 +367,6 @@
 
 \newcommand{\freqSym}{f}
 \newcommand{\power}{\alpha}
-
-%===============================================================================
-% Super Resolution
-%===============================================================================
-\newcommand{\sr}{SR\xspace}
-
-% Datasets
-
-% Previous SR papers
-\newcommand{\gan}{GAN\xspace}
-\newcommand{\srThree}{SR3\xspace}
-\newcommand{\realEsrgan}{Real-ESRGAN\xspace}
-
-%===============================================================================
-% Novel View Rendering
-%===============================================================================
-\newcommand{\nvs}{NVS\xspace}
-\newcommand{\nerf}{NeRF\xspace}
-\newcommand{\nerfs}{NeRFs\xspace}
-\newcommand{\gs}{3DGS\xspace}
-\newcommand{\sfm}{SfM\xspace}
-
-% Datasets
-\newcommand{\mipNerf}{Mip-\nerf}
-\newcommand{\tAndT}{Tank \& Temples\xspace}
-\newcommand{\deepBlend}{Deep Blending\xspace}
-\newcommand{\ommo}{OMMO\xspace}
-\newcommand{\shelly}{Shelly\xspace}
-\newcommand{\synNerf}{Syn-\nerf}
-\newcommand{\synthNerf}{Synthetic-\nerf}
-
-% Metrics
-\newcommand{\psnr}{PSNR\xspace}
-\newcommand{\ssim}{SSIM\xspace}
-\newcommand{\lpips}{LPIPS\xspace}
-\newcommand{\sep}{/\xspace}
-
-% Ranking
-\newcommand{\firstF}[1]{\hspace{-0.9\fboxsep}\colorbox{sns_violet!60}{\textbf{#1}}\hspace{-0.9\fboxsep}}
-\newcommand{\secondF}[1]{\hspace{-0.9\fboxsep}\colorbox{sns_yellow}{\textit{#1}}\hspace{-0.9\fboxsep}}
-\newcommand{\taken}{$^\dagger$}
-
-% Previous NeRF Papers
-\newcommand{\mipNerfTSO}{Mip-\nerf 360\xspace}
-\newcommand{\zipNerf}{Zip-\nerf\xspace}
-\newcommand{\autoRF}{AutoRF\xspace}
-\newcommand{\autoRFWithFCOS}{\autoRF{}\!+\!FCOS\xspace}
-\newcommand{\bootInv}{BootInv\xspace}
-\newcommand{\codeNerf}{CodeNeRF\xspace}
-\newcommand{\upNeRF}{UPNeRF\xspace}
-\newcommand{\upBoot}{UPBootInv\xspace}
-\newcommand{\pixelNerf}{PixelNeRF\xspace}
-
-% Previous 3DGS Papers
-\newcommand{\mcmc}{MCMC\xspace}
 
 %===============================================================================
 % Object Detection
@@ -441,7 +523,7 @@
 \newcommand{\lost}[1]{\textcolor{lost}{#1}}
 \newcommand{\good}[2]{{$#1$} {({\gain{\textbf{+}$\mathbf{#2}$}})}}
 \newcommand{\bad}[2]{{$#1$} {({\lost{--$#2$}})}}
-\newcommand{\arxiv}{ArXiv\xspace}
+\newcommand{\nothing}[1]{{$#1$} {({{$+0.00$}})}}
 \newcommand{\mySign}{\!+\!}
 \newcommand{\mathDash}{$-$}
 
@@ -610,6 +692,7 @@
 \newcommand{\pixUCenterTwoD}{\pixU_{c,2D}}
 \newcommand{\pixVCenterTwoD}{\pixV_{c,2D}}
 \newcommand{\relu}{ReLU\xspace}
+\newcommand{\relus}{ReLUs\xspace}
 \newcommand{\plucker}{Plucker\xspace}
 \newcommand{\ray}{\overrightarrow{r}}
 \newcommand{\trend}{trend\xspace}
