@@ -120,6 +120,7 @@
 \newcommand{\forExample}{\textit{e.g.}\xspace}
 \newcommand{\thatIs}{\textit{i.e.}\xspace}
 \newcommand{\etcetera}{\textit{etc.}\xspace}
+% \newcommand{\argmax}{\operatornamewithlimits{argmax}}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
 % \newcommand{\wrt}{\textit{wrt}\xspace}
@@ -132,6 +133,9 @@
 \newcommand{\cmark}{\checkmark}%\ding{51}}%
 \newcommand{\xmark}{\ding{53}}
 \newcommand{\autoBraces}[1]{\left(#1\right)}
+
+\newcommand{\myHat}[1]{\widehat{#1}}
+\newcommand{\mySp}{\hspace{0.04cm}}
 
 %===============================================================================
 % Mathematical Notations
@@ -268,6 +272,7 @@
 
 % Previous NeRF Papers
 \newcommand{\mipNerfMethod}{Mip-\nerf}
+\newcommand{\ever}{EVER\xspace}
 \newcommand{\zipNerf}{Zip-\nerf}
 \newcommand{\autoRF}{AutoRF\xspace}
 \newcommand{\autoRFWithFCOS}{\autoRF{}\!+\!FCOS\xspace}
@@ -276,6 +281,8 @@
 \newcommand{\upNeRF}{UPNeRF\xspace}
 \newcommand{\upBoot}{UPBootInv\xspace}
 \newcommand{\pixelNerf}{PixelNeRF\xspace}
+\newcommand{\nerfstudio}{Nerfstudio\xspace}
+\newcommand{\gsplat}{gsplat\xspace}
 
 % Previous 3DGS Papers
 \newcommand{\mcmc}{MCMC\xspace}
@@ -313,11 +320,17 @@
 \newcommand{\params}{\theta}
 \newcommand{\nField}{f}
 \newcommand{\nFieldGT}{f}
-\newcommand{\nFieldGTLP}{f^{low}}
-\newcommand{\nFieldPdLP}{\hat{f}^{low}}
-\newcommand{\nFieldMLP}{\nField_\params^{MLP}}
-\newcommand{\nFieldCNN}{\nField_\params^{CNN}}
-\newcommand{\nFieldQNN}{\nField_\params^{QNN}}
+\newcommand{\nFieldPd}{\myHat{f}}
+\newcommand{\nFieldGTLP}{\nFieldGT^{\mySp low}}
+\newcommand{\nFieldPdLP}{\nFieldPd^{\mySp low}}
+\newcommand{\nFieldMLP}{\nFieldPd_\params^{\mySp MLP}}
+\newcommand{\nFieldCNN}{\nFieldPd_\params^{\mySp CNN}}
+\newcommand{\nFieldQNN}{\nFieldPd_\params^{\mySp QNN}}
+\newcommand{\nFieldGS}{\myHat{\nField}_\params^{\mySp GS}}
+\newcommand{\nFieldGSQNN}{\myHat{\nField}_\params^{\mySp GS+QNN}}
+\newcommand{\opacityGT}{\alpha}
+\newcommand{\opacityPd}{\myHat{\alpha}}
+\newcommand{\background}{b}
 \newcommand{\inDim}{d}
 \newcommand{\outDim}{m}
 \newcommand{\numLayer}{l}
@@ -332,6 +345,7 @@
 \newcommand{\qiren}{QIREN\xspace}
 \newcommand{\finer}{FINER\xspace}
 \newcommand{\inChannels}{C_{in}}
+\newcommand{\lowChannels}{C_{low}}
 \newcommand{\outChannels}{C_{out}}
 \newcommand{\hidChannels}{C_{h}}
 \newcommand{\numData}{N}
