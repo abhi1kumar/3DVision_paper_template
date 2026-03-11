@@ -216,6 +216,7 @@
 \newcommand{\nvs}{NVS\xspace}
 \newcommand{\nerf}{NeRF\xspace}
 \newcommand{\nerfs}{NeRFs\xspace}
+\newcommand{\gsOnly}{GS\xspace}
 \newcommand{\gs}{3DGS\xspace}
 \newcommand{\gsFull}{\threeD Gaussian Splatting\xspace}
 \newcommand{\sfm}{SfM\xspace}
@@ -223,7 +224,7 @@
 \newcommand{\sh}{SH\xspace}
 
 % Datasets
-\newcommand{\mipNerf}{Mip-\nerf}
+\newcommand{\mipNerf}{Mip-\nerf~{360}\xspace}
 \newcommand{\tAndT}{Tank \& Temples\xspace}
 \newcommand{\deepBlend}{Deep Blending\xspace}
 \newcommand{\ommo}{OMMO\xspace}
@@ -231,22 +232,44 @@
 \newcommand{\synNerf}{Syn-\nerf}
 \newcommand{\synthNerf}{Synthetic-\nerf}
 
+% Loss
+\newcommand{\lDSSIM}{\loss_{DSSIM}}
+
 % Metrics
 \newcommand{\psnr}{PSNR\xspace}
 \newcommand{\ssim}{SSIM\xspace}
 \newcommand{\lpips}{LPIPS\xspace}
 \newcommand{\psnrEdge}{PSNR$_\text{Edge}$\xspace}
-\newcommand{\sep}{\textcolor{black!70}{/}\xspace}
+\newcommand{\fps}{FPS\xspace}
+\newcommand{\sep}{\textbf{\textcolor{black!90}{/}}\xspace}
 
 % Ranking
-\newcommand{\firstColor}{sns_violet!60}
-\newcommand{\secondColor}{sns_yellow}
-\newcommand{\firstB}[1]{\hspace{-0.7\fboxsep}\begingroup\setlength{\fboxsep}{0.06cm}\colorbox{\firstColor}{${#1}$}\endgroup\hspace{-0.7\fboxsep}}
-\newcommand{\secondB}[1]{\hspace{-0.7\fboxsep}\begingroup\setlength{\fboxsep}{0.06cm}\colorbox{\secondColor}{${#1}$}\endgroup\hspace{-0.7\fboxsep}}
+\newcommand{\firstColor}{tablered}
+\newcommand{\secondColor}{orange}
+\newcommand{\thirdColor}{yellow}
+
+\newcommand{\genericB}[2]{%
+    \hspace{-0.7\fboxsep}%
+    \begingroup%
+    \setlength{\fboxsep}{0.06cm}% Controls horizontal width (keep it small)
+    \colorbox{#2}{%
+        \rule[-0.4ex]{0pt}{2.2ex}% Forces vertical height (adjust 2.6ex for more/less height)
+        \hspace{0.1em}#1\hspace{0.1em}% Optional: fine-tune internal width
+    }%
+    \endgroup%
+    \hspace{-0.7\fboxsep}%
+}
+\newcommand{\firstB}[1]{\genericB{#1}{\firstColor}}
+\newcommand{\secondB}[1]{\genericB{#1}{\secondColor}}
+\newcommand{\thirdB}[1]{\genericB{#1}{\thirdColor}}
+
 \newcommand{\firstBText}[1]{\hspace{-0.7\fboxsep}\begingroup\setlength{\fboxsep}{0.06cm}\colorbox{\firstColor}{{#1}}\endgroup\hspace{-0.7\fboxsep}}
 \newcommand{\secondBText}[1]{\hspace{-0.7\fboxsep}\begingroup\setlength{\fboxsep}{0.06cm}\colorbox{\secondColor}{{#1}}\endgroup\hspace{-0.7\fboxsep}}
+\newcommand{\thirdBText}[1]{\hspace{-0.7\fboxsep}\begingroup\setlength{\fboxsep}{0.06cm}\colorbox{\thirdColor}{{#1}}\endgroup\hspace{-0.7\fboxsep}}
+
 \newcommand{\firstF}[1]{\cellcolor{\firstColor}$#1$}
 \newcommand{\secondF}[1]{\cellcolor{\secondColor}$#1$}
+\newcommand{\thirdF}[1]{\cellcolor{\thirdColor}$#1$}
 
 \newcommand{\first}[1]{$\textcolor{sns_blue}{\mathbf{#1}}$}
 \newcommand{\second}[1]{$\textcolor{sns_orange}{\mathbf{#1}}$}
@@ -289,6 +312,10 @@
 \newcommand{\vdgs}{VDGS\xspace}
 \newcommand{\mipSplat}{Mip-Splat\xspace}
 
+% Optimizer
+\newcommand{\adam}{Adam\xspace}
+\newcommand{\adamW}{AdamW\xspace}
+
 %===============================================================================
 % Super Resolution
 %===============================================================================
@@ -320,7 +347,9 @@
 \newcommand{\params}{\theta}
 \newcommand{\nField}{f}
 \newcommand{\nFieldGT}{f}
+\newcommand{\nFieldLearnt}{\nField_{\params}}
 \newcommand{\nFieldPd}{\myHat{f}}
+\newcommand{\nFieldLP}{\nFieldGT^{low}}
 \newcommand{\nFieldGTLP}{\nFieldGT^{\mySp low}}
 \newcommand{\nFieldPdLP}{\nFieldPd^{\mySp low}}
 \newcommand{\nFieldMLP}{\nFieldPd_\params^{\mySp MLP}}
@@ -333,7 +362,7 @@
 \newcommand{\background}{b}
 \newcommand{\inDim}{d}
 \newcommand{\outDim}{m}
-\newcommand{\numLayer}{l}
+\newcommand{\numLayer}{L}
 \newcommand{\compose}{\circ}
 \newcommand{\linear}{G}
 \newcommand{\convol}{K}
@@ -392,6 +421,12 @@
 \newcommand{\highFreq}{high-frequency\xspace}
 \newcommand{\HighFreq}{High-frequency\xspace}
 \newcommand{\lf}{LF\xspace}
+\newcommand{\hf}{HF\xspace}
+
+\newcommand{\lowFid}{low-fidelity\xspace}
+\newcommand{\LowFid}{Low-fidelity\xspace}
+\newcommand{\highFid}{high-fidelity\xspace}
+\newcommand{\HighFid}{High-fidelity\xspace}
 
 \newcommand{\qConv}{Qonvolution\xspace}
 \newcommand{\qConvs}{Qonvolutions\xspace}
@@ -466,6 +501,7 @@
 \newcommand{\waymo}{Waymo\xspace}
 \newcommand{\waymoOpen}{Waymo Open\xspace}
 \newcommand{\imageNet}{ImageNet\xspace}
+\newcommand{\mnist}{MNIST\xspace}
 \newcommand{\nyuDepth}{NYU-Depth-v2\xspace}
 \newcommand{\valOne}{Val 1\xspace}
 \newcommand{\valTwo}{Val 2\xspace}
