@@ -5,10 +5,11 @@
 % Colors
 %===============================================================================
 % Seaborn colors
-\definecolor{sns_blue}{rgb}{0.21, 0.06, 0.42}    % (54,  115, 107)
-\definecolor{sns_violet}{rgb}{0.45, 0.12, 0.51}  % (115,  31, 130)
-\definecolor{sns_orange}{rgb}{0.75, 0.22, 0.46}  % (191,  56, 117)
-\definecolor{sns_yellow}{rgb}{0.99, 0.91, 0.66}  % (252, 232, 168)
+\definecolor{sns_blue}{rgb}{0.21, 0.06, 0.42}        % (54,  115, 107)
+\definecolor{sns_violet}{rgb}{0.45, 0.12, 0.51}      % (115,  31, 130)
+\definecolor{sns_orange}{rgb}{0.75, 0.22, 0.46}      % (191,  56, 117)
+\definecolor{sns_orange_two}{rgb}{0.94, 0.38, 0.36}  % (191,  56, 117)
+\definecolor{sns_yellow}{rgb}{0.99, 0.91, 0.66}      % (252, 232, 168)
 % colors_temp = sns.color_palette("magma", 10)
 % sns[1] {0.2, 0.06, 0.40}
 % sns[2] {0.34, 0.08, 0.49}
@@ -27,10 +28,16 @@
 % sns[17] {1.00, 0.73, 0.51} % (254, 187, 129)
 % sns[19] {0.99, 0.91, 0.66}
 
-% NeRF colors
+% NeRF Ranking colors
 \definecolor{yellow}{rgb}{1, 1, 0.7}
 \definecolor{orange}{rgb}{1, 0.85, 0.7}
 \definecolor{tablered}{rgb}{1, 0.7, 0.7}
+
+% Neural Harmonic Texture Ranking Colors
+\definecolor{bestBlue}{RGB}{140,180,255}
+\definecolor{secondBlue}{RGB}{200,220,255}
+\definecolor{thirdBlue}{RGB}{229,238,255}
+\definecolor{bestBlueDark}{RGB}{93,164,241}
 
 % Table row colors
 \definecolor{gain}{HTML}{34a853}
@@ -79,7 +86,7 @@
 \definecolor{forward_color}{rgb}{0.2, 1.0, 0.6}
 \colorlet{proposedShade}{darkGreen}
 \colorlet{vanillaShade}{red!90}
-\colorlet{theme_color}{sns_orange}%my_yellow
+\colorlet{theme_color}{bestBlueDark}%my_yellow
 \colorlet{theme_color_light}{sns_yellow!25}
 \colorlet{link_color}{Maroon}
 \colorlet{ood_color}{gray!20}
@@ -94,6 +101,8 @@
 %===============================================================================
 % No indent heading
 \newcommand{\noIndentHeading}[1]{\noindent\textbf{#1}}
+
+\newcommand{\supp}{Supp\xspace}
 
 % Textual Comments
 \newcommand{\question}[1]{\noindent\fontseries{sb}\textbf{#1}}
@@ -198,17 +207,46 @@
 \newcommand{\rightarrowRHDSmall}{\raisebox{0.05\normalbaselineskip}{\scalebox{0.75}{$\rightarrowRHD$}}}   %$\uparrow$
 \newcommand{\leftarrowRHDSmall}{\raisebox{0.05\normalbaselineskip}{\scalebox{0.75}{$\leftarrowRHD$}}} %$\downarrow$
 
+\newcommand{\uparrowRHDSmallTwo}  {\raisebox{0.17\normalbaselineskip}{\scalebox{0.56}{\uparrowRHD}~}}  
+\newcommand{\downarrowRHDSmallTwo}  {\raisebox{0.17\normalbaselineskip}{\scalebox{0.56}{\downarrowRHD}}}  
+
 % Conferences
-\newcommand{\cvpr}{CVPR}
-\newcommand{\eccv}{ECCV}
-\newcommand{\iccv}{ICCV}
-\newcommand{\iclr}{ICLR}
-\newcommand{\icml}{ICML}
-\newcommand{\nips}{NIPS}
-\newcommand{\sigg}{SIGG}
-\newcommand{\arxiv}{ArXiv}
-\newcommand{\venue}[1]{\tiny{#1}}
-\newcommand{\citeTiny}[1]{{\tiny{\citep{#1}}}}
+\newcommand{\cvpr}{CVPR\xspace}
+\newcommand{\eccv}{ECCV\xspace}
+\newcommand{\iccv}{ICCV\xspace}
+\newcommand{\iclr}{ICLR\xspace}
+\newcommand{\icml}{ICML\xspace}
+\newcommand{\nips}{NeurIPS\xspace}
+\newcommand{\sigg}{SIGG\xspace}
+\newcommand{\arxiv}{ArXiv\xspace}
+\newcommand{\aaai}{AAAI\xspace}
+\newcommand{\venue}[1]{\scriptsize{#1}}
+\newcommand{\citeTiny}[1]{\tiny{\citep{#1}}}
+
+%===============================================================================
+% Scene Generation
+%===============================================================================
+\newcommand{\multiview}{Multi-view\xspace}
+\newcommand{\mV}{MV\xspace}
+\newcommand{\ldis}{LDIs\xspace}
+\newcommand{\inTheWild}{in-the-Wild\xspace}
+\newcommand{\InTheWild}{In-the-Wild\xspace}
+
+\newcommand{\lrm}{LRM\xspace}
+\newcommand{\lrms}{\lrm{}s\xspace}
+\newcommand{\longLRM}{Long\lrm{}\xspace}
+\newcommand{\tttLRM}{ttt\lrm{}\xspace}
+\newcommand{\foamLRM}{Foam\lrm{}\xspace}
+\newcommand{\vggt}{VGGT\xspace}
+\newcommand{\vggtOmega}{VGGT-$\Omega$\xspace}
+\newcommand{\depthAnythingThree}{DA3\xspace}
+\newcommand{\genRecon}{GenRecon\xspace}
+\newcommand{\dynaTokens}{DynaTokens\xspace}
+
+\newcommand{\dino}{DINO\xspace}
+\newcommand{\dinoVTwo}{\dino{}v2\xspace}
+\newcommand{\dinoVThree}{\dino{}v3\xspace}
+\newcommand{\qwenImageEdit}{Qwen-Image-Edit\xspace}
 
 %===============================================================================
 % Novel View Rendering
@@ -231,6 +269,7 @@
 \newcommand{\shelly}{Shelly\xspace}
 \newcommand{\synNerf}{Syn-\nerf}
 \newcommand{\synthNerf}{Synthetic-\nerf}
+\newcommand{\dlThreedv}{DL3DV\xspace}
 
 % Loss
 \newcommand{\lDSSIM}{\loss_{DSSIM}}
@@ -241,12 +280,13 @@
 \newcommand{\lpips}{LPIPS\xspace}
 \newcommand{\psnrEdge}{PSNR$_\text{Edge}$\xspace}
 \newcommand{\fps}{FPS\xspace}
+\newcommand{\db}{dB\xspace}
 \newcommand{\sep}{\textbf{\textcolor{black!90}{/}}\xspace}
 
 % Ranking
-\newcommand{\firstColor}{tablered}
-\newcommand{\secondColor}{orange}
-\newcommand{\thirdColor}{yellow}
+\newcommand{\firstColor}{bestBlue}%tablered
+\newcommand{\secondColor}{secondBlue}%orange
+\newcommand{\thirdColor}{thirdBlue}%yellow
 
 \newcommand{\genericB}[2]{%
     \hspace{-0.7\fboxsep}%
@@ -259,7 +299,7 @@
     \endgroup%
     \hspace{-0.7\fboxsep}%
 }
-\newcommand{\firstB}[1]{\genericB{#1}{\firstColor}}
+\newcommand{\firstB}[1]{\genericB{\textbf{#1}}{\firstColor}}
 \newcommand{\secondB}[1]{\genericB{#1}{\secondColor}}
 \newcommand{\thirdB}[1]{\genericB{#1}{\thirdColor}}
 
@@ -267,7 +307,7 @@
 \newcommand{\secondBText}[1]{\hspace{-0.7\fboxsep}\begingroup\setlength{\fboxsep}{0.06cm}\colorbox{\secondColor}{{#1}}\endgroup\hspace{-0.7\fboxsep}}
 \newcommand{\thirdBText}[1]{\hspace{-0.7\fboxsep}\begingroup\setlength{\fboxsep}{0.06cm}\colorbox{\thirdColor}{{#1}}\endgroup\hspace{-0.7\fboxsep}}
 
-\newcommand{\firstF}[1]{\cellcolor{\firstColor}$#1$}
+\newcommand{\firstF}[1]{\cellcolor{\firstColor}$\mathbf{#1}$}
 \newcommand{\secondF}[1]{\cellcolor{\secondColor}$#1$}
 \newcommand{\thirdF}[1]{\cellcolor{\thirdColor}$#1$}
 
@@ -293,6 +333,15 @@
 \newcommand{\mathDash}{$-$}
 \newcommand{\avg}{Avg\xspace}
 
+% Previous 3DGS Papers
+\newcommand{\mcmc}{MCMC\xspace}
+\newcommand{\vdgs}{VDGS\xspace}
+\newcommand{\mipSplat}{Mip-Splat\xspace}
+\newcommand{\dbs}{$\beta$-Splat\xspace}
+\newcommand{\sv}{SV\xspace}
+\newcommand{\nht}{NHT\xspace}
+\newcommand{\powerfoam}{PFoam\xspace}
+
 % Previous NeRF Papers
 \newcommand{\mipNerfMethod}{Mip-\nerf}
 \newcommand{\ever}{EVER\xspace}
@@ -306,11 +355,6 @@
 \newcommand{\pixelNerf}{PixelNeRF\xspace}
 \newcommand{\nerfstudio}{Nerfstudio\xspace}
 \newcommand{\gsplat}{gsplat\xspace}
-
-% Previous 3DGS Papers
-\newcommand{\mcmc}{MCMC\xspace}
-\newcommand{\vdgs}{VDGS\xspace}
-\newcommand{\mipSplat}{Mip-Splat\xspace}
 
 % Optimizer
 \newcommand{\adam}{Adam\xspace}
@@ -336,6 +380,7 @@
 \newcommand{\ddpm}{DDPM\xspace}
 \newcommand{\realEsrgan}{Real-ESRGAN\xspace}
 \newcommand{\srThree}{SR3\xspace}
+\newcommand{\invSR}{InvSR\xspace}
 
 %===============================================================================
 % Neural Fields
@@ -432,6 +477,7 @@
 \newcommand{\qConvs}{Qonvolutions\xspace}
 \newcommand{\qConvFull}{Queried-Convolution\xspace}
 \newcommand{\qConvsFull}{Queried-Convolutions\xspace}
+\newcommand{\coordConv}{CoordConv\xspace}
 
 \newcommand{\mlp}{MLP\xspace}
 \newcommand{\mlps}{MLPs\xspace}
@@ -441,6 +487,7 @@
 \newcommand{\fcns}{FCNs\xspace}
 \newcommand{\qnn}{QNN\xspace}
 \newcommand{\qnns}{QNNs\xspace}
+\newcommand{\coordCnns}{Coordinate \cnns}
 
 \newcommand{\hashGrid}{hash-grid\xspace}
 \newcommand{\hashGrids}{hash-grids\xspace}
